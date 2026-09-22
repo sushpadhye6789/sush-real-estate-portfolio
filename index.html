@@ -1,0 +1,327 @@
+<title>Sush Padhye — Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#FFFFFF;
+    --ink:#1A1A1A;
+    --orange:#E8622C;
+    --grey:#8A8A8A;
+    --line:#EDEDED;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--ink);
+    font-family:"Poppins",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  section{padding-block:72px;}
+
+  /* header */
+  .topbar{
+    display:flex;align-items:center;gap:14px;
+    padding-top:48px;padding-bottom:8px;
+  }
+  .byline{font:800 22px "Poppins",sans-serif;}
+
+  /* hero */
+  .hero h1{
+    font:800 clamp(38px,6.2vw,66px)/1.08 "Poppins",sans-serif;
+    margin:44px 0 0;
+    text-wrap:balance;
+    max-width:15ch;
+  }
+  .hero h1 span{color:var(--orange);}
+  .hero p{
+    font:400 19px/1.6 "Poppins",sans-serif;
+    color:#4D4D4D;
+    max-width:56ch;
+    margin:26px 0 0;
+  }
+
+  /* case studies */
+  .case-block{margin-bottom:64px;}
+  .case-block:last-child{margin-bottom:0;}
+  .case-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:20px;flex-wrap:wrap;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:16px;margin-bottom:28px;
+  }
+  .case-head h2{font:700 clamp(26px,4vw,38px)/1.1 "Poppins",sans-serif;margin:0;}
+  .case-meta{
+    font:700 13px "Poppins",sans-serif;
+    text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--white);
+    background:var(--ink);
+    padding:6px 12px;
+  }
+  .case-dek{font:400 17px/1.6 "Poppins",sans-serif;color:#4D4D4D;max-width:64ch;margin:0 0 32px;}
+
+  .stat-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:2px;background:var(--ink);
+    margin-bottom:32px;
+  }
+  .stat{background:var(--orange);color:var(--white);padding:26px 20px;}
+  .stat:nth-child(2n){background:var(--ink);}
+  .stat .num{font:800 36px/1 "Poppins",sans-serif;font-variant-numeric:tabular-nums;display:block;}
+  .stat .delta{font:700 13px "Poppins",sans-serif;display:inline-block;margin-top:8px;opacity:0.9;}
+  .stat .label{display:block;margin-top:6px;font:500 13px "Poppins",sans-serif;opacity:0.75;}
+
+  .findings{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .find-card{border:2px solid var(--ink);padding:24px;}
+  .find-card h3{
+    font:700 13px "Poppins",sans-serif;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--orange);margin:0 0 12px;
+  }
+  .find-card p, .find-card ul{font:400 15px/1.6 "Poppins",sans-serif;margin:0;padding:0;color:#333;}
+  .find-card ul{list-style:none;}
+  .find-card li{margin-bottom:8px;padding-left:16px;position:relative;}
+  .find-card li::before{content:"→";position:absolute;left:0;color:var(--orange);font-weight:700;}
+
+  .creative-note{
+    margin-top:24px;
+    font:600 17px/1.5 "Poppins",sans-serif;
+    padding:20px 24px;
+    background:var(--ink);
+    color:var(--white);
+  }
+  .creative-note span{color:var(--orange);}
+
+  .obj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--ink);margin-bottom:32px;}
+  .obj{background:var(--white);border:none;padding:22px 18px;}
+  .obj .obj-num{font:800 13px "Poppins",sans-serif;color:var(--orange);display:block;margin-bottom:10px;}
+  .obj h4{font:700 16px/1.3 "Poppins",sans-serif;margin:0 0 6px;}
+  .obj p{font:400 13px/1.5 "Poppins",sans-serif;color:#5C5C5C;margin:0;}
+
+  .table-wrap{overflow-x:auto;margin-bottom:32px;}
+  table.data{width:100%;border-collapse:collapse;font:400 14px "Poppins",sans-serif;}
+  table.data th, table.data td{border:1px solid var(--ink);padding:12px 14px;text-align:left;white-space:nowrap;}
+  table.data th{background:var(--ink);color:var(--white);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.05em;}
+  table.data td.hl{color:var(--orange);font-weight:700;}
+
+  .learn-list{list-style:none;margin:0 0 32px;padding:0;display:grid;gap:2px;background:var(--ink);}
+  .learn-list li{background:var(--white);padding:20px 22px;font:400 15px/1.6 "Poppins",sans-serif;color:#333;position:relative;padding-left:44px;}
+  .learn-list li::before{content:"✓";position:absolute;left:18px;color:var(--orange);font-weight:800;}
+
+  /* footer */
+  footer{padding-block:64px;border-top:2px solid var(--ink);}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .foot-brand{display:flex;align-items:center;gap:12px;}
+  .foot-word{font:600 15px "Poppins",sans-serif;}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap;}
+  .foot-links a{color:var(--ink);text-decoration:none;font:600 14px "Poppins",sans-serif;border-bottom:2px solid var(--orange);padding-bottom:2px;}
+
+  .also-worked{border-top:2px solid var(--ink);padding-top:36px;margin-top:8px;}
+  .also-worked h3{font:700 13px "Poppins",sans-serif;text-transform:uppercase;letter-spacing:0.08em;color:var(--orange);margin:0 0 18px;}
+  .brand-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .brand-chip{border:2px solid var(--ink);padding:10px 18px;font:600 15px "Poppins",sans-serif;white-space:nowrap;}
+
+  @media (max-width:640px){
+    section{padding-block:48px;}
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+    .findings{grid-template-columns:1fr;}
+    .obj-grid{grid-template-columns:repeat(2,1fr);}
+  }
+</style>
+
+<div class="wrap">
+  <div class="topbar">
+    <span class="byline">Sush Padhye</span>
+    <span class="byline" style="opacity:0.5;font-weight:500;">— Real Estate Portfolio</span>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Marketing that turned <span>browsers into buyers.</span></h1>
+    <p>A record of real estate marketing work spanning performance media, brand strategy and organic growth — Google &amp; Meta campaigns for residential land estates, national SEM &amp; SEO strategy and full-funnel brand planning for a volume home builder, plus engagements across agencies, proptech and review platforms shaping how people buy, sell and build homes.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+
+    <div id="real-estate">
+      <div class="case-block">
+        <div class="case-head">
+          <h2>Real Estate Development — Villawood Properties</h2>
+          <span class="case-meta">June 2022</span>
+        </div>
+        <p class="case-dek">Monthly Google &amp; Facebook/Instagram digital advertising report for a broader development campaign — disciplined month-on-month optimisation pushed volume up while cost per lead kept falling.</p>
+
+        <div class="stat-grid">
+          <div class="stat"><span class="num">59,263</span><span class="delta">+71% MoM</span><span class="label">Impressions</span></div>
+          <div class="stat"><span class="num">1,652</span><span class="delta">+19% MoM</span><span class="label">Clicks</span></div>
+          <div class="stat"><span class="num">112</span><span class="delta">+64% MoM</span><span class="label">Leads</span></div>
+          <div class="stat"><span class="num">$23.65</span><span class="delta">−32% MoM</span><span class="label">Cost per lead</span></div>
+        </div>
+
+        <div class="findings">
+          <div class="find-card">
+            <h3>Google Search</h3>
+            <p>39 leads (+9% MoM) at a $21 CPL, down 20% MoM, with a 23.46% CTR. The lot-size ad led the account: 22.56 conversions, 5.18% conversion rate, 557 clicks, 35.40% CTR.</p>
+          </div>
+          <div class="find-card">
+            <h3>Facebook &amp; Instagram</h3>
+            <ul>
+              <li>73 leads (61 on-platform, 12 to site), +120% MoM — CPL down 53%, CVR up 52%</li>
+              <li>Best ad set: Development_Interests_35-44, 18 leads at $16 CPL</li>
+              <li>Top creatives: aerial narrow (10 leads / 48 clicks) and aerial wide (8 leads / 49 clicks)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="creative-note">The winning formula repeated: <span>aerial imagery</span> of the waterways, paired with lifestyle and transport messaging, kept outperforming every other creative in the account.</p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-head">
+          <h2>Sherwood Grange, Sunbury — Villawood Properties</h2>
+          <span class="case-meta">August 2021</span>
+        </div>
+        <p class="case-dek">Monthly Google &amp; Facebook/Instagram digital advertising report for a residential land release on Melbourne's fringe — the month optimisation compounded, driving impressions up sharply while cost per lead fell.</p>
+
+        <div class="stat-grid">
+          <div class="stat"><span class="num">60,197</span><span class="delta">+82% MoM</span><span class="label">Impressions</span></div>
+          <div class="stat"><span class="num">1,764</span><span class="delta">+16% MoM</span><span class="label">Clicks</span></div>
+          <div class="stat"><span class="num">112</span><span class="delta">+54% MoM</span><span class="label">Leads</span></div>
+          <div class="stat"><span class="num">$23.65</span><span class="delta">−42% MoM</span><span class="label">Cost per lead</span></div>
+        </div>
+
+        <div class="findings">
+          <div class="find-card">
+            <h3>Google Search</h3>
+            <p>39 leads (+14% MoM) at a $21 CPL, down 13% MoM, with a 20.35% CTR. Top keyword "Sherwood Grange" converted at 3.89% for $18.24 CPL; best ad ran a 39.40% CTR at 4.28% conversion rate.</p>
+          </div>
+          <div class="find-card">
+            <h3>Facebook &amp; Instagram</h3>
+            <ul>
+              <li>73 leads, +108% MoM — CPL down 57%, CVR up 52%</li>
+              <li>Best ad set: Property_Interests_25-44, 28 leads at $17 CPL</li>
+              <li>Top creatives: aerial closeup (9 leads) and aerial wide (7 leads)</li>
+            </ul>
+          </div>
+        </div>
+        <p class="creative-note">Both top-converting creatives were <span>aerial shots</span> of the estate's waterways and parklands — lifestyle and access, not the house itself, is what moved the CPL.</p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-head">
+          <h2>SEM &amp; SEO Strategy — Burbank Homes</h2>
+          <span class="case-meta">March 2021 · National</span>
+        </div>
+        <p class="case-dek">A national paid search and organic growth strategy for a volume home builder trading across four states — aligning search, video and display budgets to where each state's buyers actually were in the journey, then building the SEO foundation to bring cost per lead down over time.</p>
+
+        <div class="obj-grid">
+          <div class="obj"><span class="obj-num">01</span><h4>Drive quality leads</h4><p>Customers ready to submit their details</p></div>
+          <div class="obj"><span class="obj-num">02</span><h4>Drive website traffic</h4><p>Customers in the research phase of their purchase</p></div>
+          <div class="obj"><span class="obj-num">03</span><h4>Increase display visits</h4><p>Customers ready to explore homes in person</p></div>
+          <div class="obj"><span class="obj-num">04</span><h4>Increase brand awareness</h4><p>Customers starting their building journey</p></div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>State</th><th>Monthly budget</th><th>Branded search</th><th>Generic search</th><th>Display</th><th>Video</th></tr></thead>
+            <tbody>
+              <tr><td>VIC</td><td class="hl">$12,916</td><td>31%</td><td>31%</td><td>—</td><td>38%</td></tr>
+              <tr><td>NSW</td><td class="hl">$4,504</td><td>42%</td><td>40%</td><td>18%</td><td>—</td></tr>
+              <tr><td>QLD</td><td class="hl">$5,443</td><td>42%</td><td>40%</td><td>18%</td><td>—</td></tr>
+              <tr><td>SA</td><td class="hl">$1,866</td><td>40%</td><td>60%</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="learn-list">
+          <li>Branded search drove the most cost-effective lead of any paid channel — a blended $30.04 CPL across all four states.</li>
+          <li>Suburb-specific ad group restructuring cut CPC by 20% in Q3 2020.</li>
+          <li>Home &amp; Land campaigns consistently drove the highest-volume, lowest-CPC traffic — the basis for expanding them further.</li>
+          <li>Early SEO fixes already moved the needle: bounce rate down 11.2%, pages per session up 16.8%, load time down 12.6%.</li>
+        </ul>
+
+        <div class="findings">
+          <div class="find-card">
+            <h3>Why SEO mattered here</h3>
+            <p>Organic was already the 3rd-highest traffic channel at 21% of the mix, and Google's page-1 results captured 92% of all organic search traffic — the strategy laid technical foundations first, then content and backlinks, to convert that ceiling into share.</p>
+          </div>
+          <div class="find-card">
+            <h3>Competitive gap vs. Metricon</h3>
+            <p>Metricon held ~1,600 keywords in Top 3 positions to Burbank's 112, and grew organic traffic from 118K to 193.7K between Sep 2019 and Feb 2021. Burbank's own organic traffic still grew 15.9K → 20.3K on fewer ranking keywords — proof positions, not just volume, had improved.</p>
+          </div>
+        </div>
+        <p class="creative-note">The plan treated SEM and SEO as one system, not two budgets: <span>SEO for CPA, SEM for volume</span> — paid search buys the clicks organic hasn't earned yet, while every technical and content fix compounds the cost of those clicks down.</p>
+      </div>
+
+      <div class="case-block">
+        <div class="case-head">
+          <h2>Strategy Refresh — Burbank Homes</h2>
+          <span class="case-meta">2021 · National</span>
+        </div>
+        <p class="case-dek">Six years into the Burbank relationship, a strategic reset — the housing market was moving faster than at any point in a decade, and the plan needed to rebuild media, creative and audience targeting around three buyer types instead of one generic "home buyer".</p>
+
+        <div class="obj-grid">
+          <div class="obj"><span class="obj-num">01</span><h4>Generate high-quality leads</h4><p>Deliver market-qualified leads to lift conversion and volume of sales</p></div>
+          <div class="obj"><span class="obj-num">02</span><h4>Build brand awareness &amp; sentiment</h4><p>Elevate perception internally and externally, and grow broad brand awareness</p></div>
+          <div class="obj"><span class="obj-num">03</span><h4>Innovate &amp; advance digital platforms</h4><p>Lead the home-building category on market-leading technology and innovation</p></div>
+        </div>
+
+        <div class="findings">
+          <div class="find-card">
+            <h3>First home buyers</h3>
+            <p>73% call home-buying research a massive hurdle; 59% plan to enter with under a 20% deposit. The average FHB age is rising, expanding the addressable audience from 330K to 480K potential reach at 20–45.</p>
+          </div>
+          <div class="find-card">
+            <h3>Second home buyers</h3>
+            <p>Downsizing activity is up 2.5x YoY, and interstate relocation for cheaper housing is accelerating — ~9,000 NSW and ~14,200 VIC residents planned a move to QLD, SA, TAS or WA within 12 months.</p>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>Funnel stage</th><th>Primary KPI</th><th>Secondary KPI</th><th>Core channels</th></tr></thead>
+            <tbody>
+              <tr><td>Awareness</td><td class="hl">Reach &amp; audience penetration</td><td>Engagement rate</td><td>Facebook, Instagram, YouTube</td></tr>
+              <tr><td>Consideration</td><td class="hl">Traffic volume</td><td>Time on site</td><td>Paid + organic search, social</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="learn-list">
+          <li>One in five Australians owns an investment property, and investors are moving decisively online for research — an opening for content-led engagement on cash flow, gearing and yields.</li>
+          <li>Burbank's spend per dwelling sits well below Metricon, Carlisle and Henley, making channel efficiency — not raw budget — the lever for share of voice.</li>
+          <li>Three brand pillars anchor every message: we care and connect with our customers, we're experts at building Aussie homes, we innovate.</li>
+          <li>Three creative platforms were developed to bring the pillars to life: <em>You're Invited</em> (experience the home before you commit), <em>The Promise</em> (hero the tradespeople behind every build), and <em>Matchmaker</em> (match the house to how a family actually lives).</li>
+        </ul>
+
+        <p class="creative-note">The refresh's real shift: stop marketing <span>one generic home buyer</span> and start running three distinct journeys — first home buyers, second home buyers and investors — each with its own insight, channel mix and creative idea.</p>
+      </div>
+
+      <div class="also-worked">
+        <h3>Also worked with, real estate</h3>
+        <div class="brand-row">
+          <span class="brand-chip">Colliers</span>
+          <span class="brand-chip">Hood</span>
+          <span class="brand-chip">RateMyAgent</span>
+          <span class="brand-chip">Eight Homes</span>
+          <span class="brand-chip">Urbanedge Homes</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <span class="foot-word">Sush Padhye</span>
+      </div>
+      <div class="foot-links">
+        <a href="https://www.linkedin.com/in/sushpadhye/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
